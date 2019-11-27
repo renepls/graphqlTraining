@@ -1,0 +1,21 @@
+type table1 {
+    _id: ID
+    name: String!
+    lastname: String!
+}
+
+# This is my comment
+input table1Input {
+    """ This field is for the name """
+    name: String!
+    lastname: String!
+}
+
+type Query {
+    """ This is my Query """
+    callDataTable1: [table1]
+}
+
+type Mutation {
+    insertDataTable1(input: table1Input): table1
+}
